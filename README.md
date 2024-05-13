@@ -26,4 +26,3 @@
 1) **oh-my-posh_update.sh** - скрипт обновления промптера oh-my-posh
 
 2) **tasks_backup.sh** - бэкап тасок из crontab
-
