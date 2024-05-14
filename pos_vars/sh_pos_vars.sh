@@ -17,43 +17,43 @@ var1=$1
 pattern1=$2
 
 echo
-echo "Script_name = $0"
-echo "Все переданные аргументы = $*"
-echo "Число аргументов = $#"
-echo "Число символов в ${var1} = ${#var1}" # Число символов в abcd12345abc6789 = 16
+echo "Script_name = $0"                                 # Script_name = ...
+echo "Все переданные аргументы = $*"                    # Все переданные аргументы = ...
+echo "Число аргументов = $#"                            # Число аргументов = ...
+echo "Число символов в ${var1} = ${#var1}"              # Число символов в ... = ...
 echo
 
 echo "-= Поиск с начала строки, pattern1 подан как переменная =-"
-echo "var1 = $1"
-echo '${var1} =' "${1}"
-echo "pattern1 = $pattern1"
+echo "var1 = $1"                                        # var1 = ...
+echo '${var1} =' "${1}"                                 # ${var1} = ...
+echo "pattern1 = $pattern1"                             # pattern1 = ...
 echo
-echo '${var1#$pattern1}     =' "${var1#$pattern1}"
+echo '${var1#$pattern1}     =' "${var1#$pattern1}"      # ${var1#$pattern1}       = ...
 # Наименьшая подстрока, удаляется минимум символов в начале строки по совпадению в var1
 #                                 ^^^^^^^         |~~~|
-echo '${var1##$pattern1}    =' "${var1##$pattern1}"
+echo '${var1##$pattern1}    =' "${var1##$pattern1}"     # ${var1##$pattern1}      = ...
 # Наибольшая подстрока, удаляется максимум символов в начале строки по совпадению в var1
 #                                 ^^^^^^^^         |~~~~~~~~|
 
 echo
 ## эксперимент без переменной pattern1, паттерн подан напрямую
 echo "-= Поиск с начала строки, pattern1 подан напрямую =-"
-echo '${var1#$'$pattern1'}          =' "${var1#$2}"
-echo '${var1##$'$pattern1'}         =' "${var1##$2}"
+echo '${var1#$'$pattern1'}          =' "${var1#$2}"     # ${var1#$ ... }          = ...
+echo '${var1##$'$pattern1'}         =' "${var1##$2}"    # ${var1##$ ... }         = ...
 echo
 echo "=========================================================="
 echo
 
 echo "-= Поиск с конца строки, pattern2 подан как переменная =-"
-pattern2=$3             # всё, что между 'b' и '9'
-echo "var1 = $var1"		# abcd12345abc6789
-echo "pattern2 = $pattern2"	# b*9
+pattern2=$3
+echo "var1 = $var1"                                     # var1 = ...
+echo "pattern2 = $pattern2"                             # pattern2 = ...
 echo
 
-echo '${var1%$pattern2}     =' "${var1%$pattern2}"     # file.test
+echo '${var1%$pattern2}     =' "${var1%$pattern2}"      # ${var1%$pattern2}       = ...
 # Наименьшая подстрока,  удаляется минимум символов в конце строки по совпадению в var1
 #                                 ^^^^^^^                     |~~~|
-echo '${var1%%$pattern2}    =' "${var1%%$pattern2}"    # file
+echo '${var1%%$pattern2}    =' "${var1%%$pattern2}"     # ${var1%%$pattern2}      = ...
 # Наибольшая подстрока, удаляется максимум символов в конце строки по совпадению в var1
 #                                 ^^^^^^^^               |~~~~~~~~|
 echo
@@ -63,8 +63,8 @@ echo
 
 ## эксперимент без переменной pattern2, паттерн подан напрямую
 echo "-= Поиск с конца строки, pattern2 подан напрямую =-"
-echo '${var1%$'$pattern2'}          =' "${var1%$3}"
-echo '${var1%%$'$pattern2'}         =' "${var1%%$3}"
+echo '${var1%$'$pattern2'}          =' "${var1%$3}"     # ${var1%$ ... }          = ...
+echo '${var1%%$'$pattern2'}         =' "${var1%%$3}"    # ${var1%%$ ... }         = ...
 echo
 
 exit 0
