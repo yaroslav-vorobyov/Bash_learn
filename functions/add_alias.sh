@@ -7,7 +7,7 @@
 # $ adda up "sudo apt list --upgradable 2>/dev/null | tail +2 | cut -f 1 -d '/'"
 # 
 # add to ~/.bash_aliases:
-# echo 'source ~/.scripts/aliases/add_alias.sh' >> ~/.bash_aliases
+# echo 'source ~/.scripts/functions/add_alias.sh' >> ~/.bash_aliases
 
 function adda() {
     echo "alias $1=\"$2\"" >> ~/.bash_aliases

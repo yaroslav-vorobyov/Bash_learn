@@ -13,7 +13,7 @@
 # alias cron_bak="crontab -l > ~/.crontab/tasks_backup.txt && echo; echo 'Crontab tasks saved!'"
 # 
 # add to ~/.bash_aliases:
-# echo 'source ~/.scripts/aliases/replace_quotes.sh' >> ~/.bash_aliases
+# echo 'source ~/.scripts/functions/replace_quotes.sh' >> ~/.bash_aliases
 
 function al_quo() {
     sed -i "s/='/=\"/g; s/'$/\"/g; s/'\\\'//g" ~/.bash_aliases
