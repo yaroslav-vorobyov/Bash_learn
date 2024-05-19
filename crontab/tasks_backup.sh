@@ -7,4 +7,4 @@
 # 3) from ## (two dashes)
 # 4) empty rows (they are dividers between sections)
 
-crontab -l | grep -e '^\(@\|$\|\*\|##\)' > ~/.crontab/tasks_backup.txt
+crontab -l | grep -e '^\(@\|$\|\*\|##\|[0-9]\)' > ~/.crontab/tasks_backup.txt
