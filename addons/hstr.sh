@@ -17,7 +17,8 @@ alias hs=hstr                       # hh alias to hstr is default
 # use substring based matching
 # keep duplicates in 'raw-history-view' (duplicate commands are discarded by default)
 # do not prompt for confirmation when deleting history items
-export HSTR_CONFIG=hicolor,prompt-top,raw-history-view,substring-matching,duplicates,no-confirm
+# export HSTR_CONFIG=hicolor,prompt-top,raw-history-view,substring-matching,duplicates,no-confirm
+export HSTR_CONFIG=hicolor,prompt-top,raw-history-view,substring-matching,no-confirm
 
 # https://github.com/dvorka/hstr/blob/master/CONFIGURATION.md#environment-variables
 export HSTR_IS_SUBSHELL=1           # when HSTR is used in a subshell, set to 1 to fix output when pressing TAB or RIGHT arrow key
