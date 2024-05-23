@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # 
 # Backup ~/.bash_aliases or any other file if it's provided as $1 env
+# Needed when ~/.bash_aliases erased or something missed in original file
 # 
 # add to ~/.bash_aliases:
 # echo 'source ~/.scripts/functions/warp_aliases.sh' >> ~/.bash_aliases
@@ -15,7 +16,7 @@ function al_bak () {
         # check if ALIAS.bak existing
         if [[ -e $ALIASES.bak ]]
         then 
-            # if ALIAS.bak bigger than ALIAS by size then make bak2-precopy just in case over .bak
+            # if ALIAS.bak bigger than ALIAS by size then bak2-precopy is made just in case over .bak
             if [[ $(stat -c %s $ALIASES.bak) -gt $(stat -c %s $ALIASES) ]]
             then
                 echo "Making precopy of .bak to prevent losses! Check .bak2 as soon as it possible!"
