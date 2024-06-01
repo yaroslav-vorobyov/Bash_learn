@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-# Add alias to current profile
-# $1 is name of alias
-# $2 is command line with options
 # 
-# example with quotes, command line has single quotes
+# Add alias to current profile
+# 
+# Variables:
+# $1 - name of an alias
+# $2 - command line with options
+# 
+# example with quotes, command line has single and double quotes
 # $ adda up "sudo apt list --upgradable 2>/dev/null | tail +2 | cut -f 1 -d '/'"
 # 
 # add to ~/.bash_aliases:

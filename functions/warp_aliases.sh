@@ -3,6 +3,9 @@
 # Backup ~/.bash_aliases or any other file if it's provided as $1 env
 # Needed when ~/.bash_aliases erased or something missed in original file
 # 
+# Variables:
+# $1 - path to existing file
+# 
 # add to ~/.bash_aliases:
 # echo 'source ~/.scripts/functions/warp_aliases.sh' >> ~/.bash_aliases
 
